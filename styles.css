@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Orbitron', sans-serif;
+  padding: 25px;
+  width: 100%;
+  background-image: url("https://www.pdowell-355.com/wp-content/uploads/2021/12/forest-ga4e96463d_1920.jpg");
+  background-size: cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 7em;
+  color: red;
+  align-items: center;
+  background-color: lightblue;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid black;
+}
+
+h2 {
+  font-size: 3em;
+  color: orange;
+  background-color: green;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+.time{
+  float: left;
+  position:absolute;
+  margin-right:68%;
+  margin-top:10%;
+  
+}
+
+.teams{
+  float: right;
+  position:absolute;
+  margin-left:68%;
+  margin-top:10%;
+  
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 700px;
+  margin: 10px 0 25px;
+  width: 700px;
+}
+
+.cell {
+  align-items: center;
+  background: #001575;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}
+
+.cell::after {
+  background: white;
+  border-radius: 50%;
+  border: 3px solid black;
+  content: '';
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
+}
+
+.cell:not(.row-top).red::after {
+  background: red;
+}
+.cell:not(.row-top).yellow::after {
+  background: yellow;
+}
+
+.cell:not(.row-top).red.win {
+  background: red;
+}
+
+.cell:not(.row-top).yellow.win {
+  background: yellow;
+}
+
+.cell.row-top {
+  
+}
+
+.cell.row-top::after {
+  border: none;
+}
+
+.cell.row-top.red::after {
+  background: red;
+  border: 3px solid black;
+}
+
+.cell.row-top.yellow::after {
+  background: yellow;
+  border: 3px solid black;
+}
+
+.reset {
+  background-color: #823780;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.reset:hover {
+  background-color: #D30BCD;
+}
+
+.reset:active {
+  background-color: #001575;
+
+}
+
+.status {
+  margin: 5px;
+  display: block;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Util CSS */
+.left-border {
+  border-left: 10px solid #00FFBD;
+}
+
+.top-border {
+  border-top: 10px solid #00FFBD;
+}
+
+.right-border {
+  border-right: 10px solid #00FFBD;
+}
+
+.bottom-border {
+  border-bottom: 10px solid #00FFBD;
+}
+
+.left-border.top-border {
+  border-radius: 10px 0 0 0;
+}
+
+.right-border.top-border {
+  border-radius: 0 10px 0 0;
+}
+
+.right-border.bottom-border {
+  border-radius: 0 0 10px 0;
+}
+
+.left-border.bottom-border {
+  border-radius: 0 0 0 10px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: yellow;
+  color: red;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #823780;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #D30BCD;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

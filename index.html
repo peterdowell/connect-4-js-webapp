@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>Connect 4 Jungle Cruise</title>
+</head>
+<body>
+<h1>CONNECT 4 JUNGLE CRUISE</h1>
+  
+ <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">GAME MODE</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#" onclick="isNormalClick()">NORMAL</a>
+    <a href="#" onclick="isBlitzClick()">BLITZ</a>
+  </div>
+</div>
+  
+<h2><span id="cellColor">Yellow</span> You have <span id="countdowntimer">10 </span> Seconds left</h2>
+  
+<div class="game-board">
+  <div class="cell row-top col-0"></div>
+  <div class="cell row-top col-1"></div>
+  <div class="cell row-top col-2"></div>
+  <div class="cell row-top col-3"></div>
+  <div class="cell row-top col-4"></div>
+  <div class="cell row-top col-5"></div>
+  <div class="cell row-top col-6"></div>
+  <div class="cell row-0 col-0 left-border top-border"></div>
+  <div class="cell row-0 col-1 top-border"></div>
+  <div class="cell row-0 col-2 top-border"></div>
+  <div class="cell row-0 col-3 top-border"></div>
+  <div class="cell row-0 col-4 top-border"></div>
+  <div class="cell row-0 col-5 top-border"></div>
+  <div class="cell row-0 col-6 top-border right-border"></div>
+  <div class="cell row-1 col-0 left-border"></div>
+  <div class="cell row-1 col-1"></div>
+  <div class="cell row-1 col-2"></div>
+  <div class="cell row-1 col-3"></div>
+  <div class="cell row-1 col-4"></div>
+  <div class="cell row-1 col-5"></div>
+  <div class="cell row-1 col-6 right-border"></div>
+  <div class="cell row-2 col-0 left-border"></div>
+  <div class="cell row-2 col-1"></div>
+  <div class="cell row-2 col-2"></div>
+  <div class="cell row-2 col-3"></div>
+  <div class="cell row-2 col-4"></div>
+  <div class="cell row-2 col-5"></div>
+  <div class="cell row-2 col-6 right-border"></div>
+  <div class="cell row-3 col-0 left-border"></div>
+  <div class="cell row-3 col-1"></div>
+  <div class="cell row-3 col-2"></div>
+  <div class="cell row-3 col-3"></div>
+  <div class="cell row-3 col-4"></div>
+  <div class="cell row-3 col-5"></div>
+  <div class="cell row-3 col-6 right-border"></div>
+  <div class="cell row-4 col-0 left-border"></div>
+  <div class="cell row-4 col-1"></div>
+  <div class="cell row-4 col-2"></div>
+  <div class="cell row-4 col-3"></div>
+  <div class="cell row-4 col-4"></div>
+  <div class="cell row-4 col-5"></div>
+  <div class="cell row-4 col-6 right-border"></div>
+  <div class="cell row-5 col-0 bottom-border left-border"></div>
+  <div class="cell row-5 col-1 bottom-border"></div>
+  <div class="cell row-5 col-2 bottom-border"></div>
+  <div class="cell row-5 col-3 bottom-border"></div>
+  <div class="cell row-5 col-4 bottom-border"></div>
+  <div class="cell row-5 col-5 bottom-border"></div>
+  <div class="cell row-5 col-6 bottom-border right-border"></div>
+</div>
+
+  
+<div class="footer">
+  <button class="reset">Reset</button>
+  <span class="status"></span>
+</div>
+<script src="scripts.js"></script>
+</body>
+<audio autoplay loop>
+  <source src="https://www.pdowell-355.com/wp-content/uploads/2021/12/Voodoo-Suite-Little-Grass-Shack.mp3" type="audio/mpeg" />
+</audio>
+</html>
